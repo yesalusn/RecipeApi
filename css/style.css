@@ -11,9 +11,8 @@ body #page {
 	width: auto;
 	z-index: 3;
 	background-attachment: scroll;
-	background-color: #778899;
-	background-image: url(images/woodgrain.png);
-	background-repeat: repeat-y;
+	background-color: #999999;
+	background-repeat: no-repeat;
 	background-position: center top;
 }
 a {
@@ -21,29 +20,27 @@ a {
 	outline: none;
 }
 a:active {
-	background: none;
+	background-color: #000;
+	background-image: none;
 }
 img {
 	border: none;
 }
 /*-------------------------------------------FONTS---------------------------------------------*/
-@font-face {
-	font-family: 'audiowide-regular-webfont';
-	src: url('../fonts/audiowide-regular-webfont.eot');
-	src: url('../fonts/audiowide-regular-webfont.woff') format('woff'), url('../fonts/audiowide-regular-webfont.ttf') format('truetype'), url('../fonts/audiowide-regular-webfont.svg') format('svg');
-}
+
 /*----------------------------------------header-styles---------------------------------------*/
 #header {
 	margin: 0;
 	min-height: 60px;
 	padding: 0;
 	width: auto;
+	background-color: #FFF;
+	background-repeat: repeat;
 }
 #header div {
 	margin: 0 auto;
 	max-width: 940px;
 	min-height: 60px;
-	padding: 0 10px;
 }
 #header div a.logo {
 	display: block;
@@ -74,7 +71,7 @@ img {
 	width: auto;
 }
 #header div ul li a {
-	color: #ffffff;
+	color: #666666;
 	display: block;
 	font-family: Arial;
 	font-size: 18px;
@@ -83,18 +80,18 @@ img {
 	margin: 0;
 	min-height: 60px;
 	padding: 0 24px;
- *padding: 0 23px; /* Needed for IE8 and old versions */
+ 	*padding: 0 23px; /* Needed for IE8 and old versions */
 	text-align: center;
 	text-transform: uppercase;
 	width: auto;
 }
 #header div ul li a:hover {
-	background-color: #556B2F;
-	color: #000000;
+	background-color: #006600;
+	color: #666666;
 }
 #header div ul li.selected a {
-	background-color: #000000;
-	color: #778899;
+	background-color: #FFFFFF;
+	color: #666666;
 }
 #header div ul li.menu {
 	position: relative;
@@ -128,7 +125,7 @@ img {
 	width: auto;
 }
 #header div ul li.menu ul li a {
-	background-color: #7CFC00;
+	background-color: #FF0000;
 	color: #ffffff;
 	display: block;
 	font-family: Arial;
@@ -148,20 +145,25 @@ img {
 }
 /*----------------------------------------body-home-styles---------------------------------------*/
 #body {
-	background-color: #000000;
+	background-color: #FFFFFF;
 	margin: 0;
 	min-height: 808px;
 	overflow: hidden;
 	padding: 0;
 	width: 100%;
+	color: #000;
 }
 #body.home {
-	background: none;
 	margin: 0;
 	min-height: 1308px;
-	overflow: hidden;
+	overflow: auto;
 	padding: 0;
-	width: 100%;
+	width: auto;
+	background: url(../images/pantrybg2.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;;
 }
 #body.home .header {
 	background: none;
@@ -191,7 +193,7 @@ img {
 	color: #FFFFFF;
 	display: block;
 	float: right;
-	font-family: audiowide-regular-webfont;
+	font-family: "Times New Roman", Times, serif;
 	font-size: 60px;
 	font-weight: normal;
 	line-height: 60px;
@@ -211,13 +213,19 @@ img {
 	font-size: 43px;
 	font-weight: normal;
 	line-height: 43px;
-	margin: 0 0 36px;
-	padding: 0 146px 0 506px;
 	position: relative;
 	text-align: right;
 	text-transform: uppercase;
 	width: 288px;
 	z-index: 60;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 36px;
+	margin-left: 0;
+	padding-top: 0;
+	padding-right: 26px;
+	padding-bottom: 0;
+	padding-left: 506px;
 }
 #body.home .header div a.more {
 	background-color: #000000;
@@ -298,7 +306,7 @@ img {
 	opacity: 0.7;
 }
 #body.home .body {
-	background-color: #069A9E;
+	background-color: #333333;
 	margin: 0;
 	min-height: 168px;
 	overflow: hidden;
@@ -516,7 +524,7 @@ img {
 	width: 120px;
 }
 #body.home .footer div ul li ul li a.more:hover {
-	background-color: #620031;
+	background-color: #006600;
 }
 /*----------------------------------------body-styles---------------------------------------*/
 #body.about .header {
@@ -525,9 +533,11 @@ img {
 	padding: 0;
 	width: 100%;
 	background-color: #000000;
-	background-image: url(../images/bg-home.jpg);
-	background-repeat: no-repeat;
-	background-position: center top;
+	background: url(../images/aboutback.jpg)  no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
 }
 #body.about .header div, #body .header div {
 	margin: 0 auto;
@@ -587,7 +597,7 @@ img {
 	color: #a3a3a3;
 }
 #body.about .body {
-	background-color: #003333;
+	background-color: #FFFFFF;
 	margin: 0;
 	min-height: 253px;
 	overflow: hidden;
@@ -614,7 +624,7 @@ img {
 	width: 620px;
 }
 #body.about .body div p {
-	color: #ffffff;
+	color: #333333;
 	display: block;
 	float: left;
 	font-family: Arial;
@@ -1096,7 +1106,7 @@ img {
 	width: auto;
 }
 #body .header div .sidebar ul li span {
-	color: #ffffff;
+	color: #333333;
 	display: block;
 	font-family: Arial;
 	font-size: 14px;
@@ -1147,7 +1157,7 @@ img {
 	opacity: 0.7;
 }
 #body .header div .sidebar ul li ul li h2 {
-	color: #A3A3A3;
+	color: #666666;
 	float: left;
 	font-family: audiowide-regular-webfont;
 	font-size: 23px;
@@ -1313,7 +1323,8 @@ img {
 	width: auto;
 }
 #footer .connect {
-	background-color: #a3a3a3;
+	background-color: #FFFFFF;
+	background-image:url(images/wood.jpg);
 	margin: 0;
 	min-height: 84px;
 	overflow: hidden;
@@ -1327,17 +1338,21 @@ img {
 	padding: 24px 0 0;
 }
 #footer .connect div h1 {
-	color: #FFFFFF;
+	color: #FF0000;
+	background-image: url(images/wood.jpg);
 	float: left;
 	font-family: audiowide-regular-webfont;
 	font-size: 23px;
 	font-weight: normal;
 	line-height: 23px;
 	margin: 0;
-	padding: 8px 25px 0 0;
 	text-align: right;
 	text-transform: uppercase;
-	width: 525px;
+	width: 620px;
+	padding-top: 8px;
+	padding-right: 25px;
+	padding-bottom: 0;
+	padding-left: 150;
 }
 #footer .connect div div {
 	float: left;
@@ -1347,7 +1362,7 @@ img {
 	width: 380px;
 }
 #footer .connect div div a {
-	background: url(../images/icons.png) no-repeat;
+	background-image:url(images/wood.jpg);
 	display: block;
 	float: left;
 	height: 36px;
@@ -1422,57 +1437,3 @@ img {
 	width: 100%;
 }
 
- /* Bordered form */
-form {
-    border: 3px solid #f1f1f1;
-}
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-/* Add padding to containers */
-.container {
-    padding: 16px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-    .cancelbtn {
-        width: 100%;
-    }
-}

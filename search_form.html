@@ -31,28 +31,20 @@
 		</div>		
 		<div id="body">
 			<div class="header">			
-					<div class="article">
-						<ul>
-							<ul>							  
-								<blockquote>
-								  <h1>Login</h1>
-								</blockquote>
-								<blockquote>			
-								 <form action="/login_form.html">
-								  <div class="container">
-									<label><b>Username</b></label>
-									<input type="text" placeholder="Enter Username" name="uname" required>
-									<label><b>Password</b></label>
-									<input type="password" placeholder="Enter Password" name="psw" required> 
-									<button type="submit">Login</button>
-								  </div>
-								  <div class="container">
-									<ul id="registration">
-										<button type="button" class="cancelbtn">Cancel</button>
-										<button type="button" class="registerbtn">New User?</button>
-										<span class="psw">Forgot <a href="#">password?</a></span>
-									</ul>
-								</form>			
+				<div class="article">
+					<ul>
+						<ul>							  
+							<blockquote>
+							  <h1>Search</h1>
+							</blockquote>
+							<blockquote>
+								<form id="search_form" action="search_form.html" autocomplete="on">
+								  <!-- puts a search box on the form -->
+								  <input id="search" type="text" name="search" placeholder="Type Ingredient or Recipe Name Here">
+								  <br><br>
+								  <!-- this will call the POST to the server to search the db with this search string -->
+								  <button type="submit" onclick="<!-- needs js function call here -->">Submit</button>
+								</form>		
 							</blockquote>							  
 						</ul>
 					</div>
