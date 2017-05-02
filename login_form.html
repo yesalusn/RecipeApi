@@ -39,15 +39,13 @@
 								  <h1>Login</h1>
 								</blockquote>
 								<blockquote>			
-								 <form action="/login_form.html" >
+								 <form action="/login_form.html" class="login_form">
 								  <div class="container">
 									<label><b>Username</b></label>
 									<input type="text" placeholder="Enter Username..." id="username" name="username" required>
 									<label><b>Password</b></label>
 									<input type="password" placeholder="Enter Password..." id="psw" required> 
-									<button type="submit">
-									Login
-									</button>
+									<button name="submitbtn">Login</button>
 								  </div>
 								  <div class="container">
 									<ul id="registration">
@@ -58,12 +56,38 @@
 								</form>
 								<p><tt id="results"></tt></p> 
 								<script>
-								  function showValues() {
-									var str = $( "form" ).serialize();
-									$( "#results" ).text( str );
-								  }
-								  $("username").on( "change", showValues );
-								  showValues();
+								  $('#submit').on('click', login);
+									function login(event){
+										console.log('Someone is loggin in');
+										event.preventDefault();									
+										var errorCount = 0;
+										$('#login_form').each(function(index,val){if($(this).val() === '') { errorCount++; }});
+										if(errorCount ===0){
+											var login = {
+												 'username': $('#username fieldset input#inputUserName').val(),
+												 'password': $('#password fieldset input#inputPassword').val()
+											}
+											
+											$.ajax({
+												type: 'POST',
+												data: login,
+												url: '/login',
+												dataType: 'JSON'
+											}).done(function(response){
+												if(response.msg ===''){
+													$('#login_form fieldset input').val('');
+												}
+												else{
+													alert('Error: ' + response.msg);
+												}
+											});
+										}
+										else{
+											alert('Please fill in all fields');
+											return false;
+										}
+									};
+									
 								</script>
 							</blockquote>	
 								
