@@ -26,8 +26,10 @@ app.use(bodyParser.json());
 
 app.use(function(req, res, next) {
     //not entirely confident on these since they are bring up undefined but from the book
-    res.setHeader('Access-Control-Allow-Origin', '*');
+	res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, PUT');
+	res.setHeader('Access-Control-Allow-Headers', 'orgin, x-requested-with-accept');
+	res.setHeader('Access-Control-Max-Age', '3628800');
     next();
 });
 //console logging
